@@ -1,0 +1,141 @@
+
+body{
+    background-color: #0b1120;
+    text-decoration: rgb(198, 220, 239);
+    font-family:Arial, Helvetica, sans-serif;
+  }
+  
+  .App-contact{
+    padding: 8%
+  }
+  
+  div.profile{
+    border-radius: 10px;
+    padding: 15px;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(47, 51, 72, 0.5);
+  }
+  
+  div.profile-photo{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .App-logo{
+    border-radius: 25px;
+    max-width: none ;
+    max-width: 52;
+    max-height: 52;
+    min-width: 36;
+    min-height: 36;
+  }
+  
+  a.profile_CV {
+    font-size: large;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    top: 20px;
+    left: 85px;
+    padding: 10px;
+    color: rgb(13, 37, 58);
+    background-color: #89b4f9;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .profile-name{
+    text-decoration-color: aliceblue;
+    width: fit-content;
+    height: fit-content;
+    padding-top : 10px;
+    margin: 0%;
+    position: static;
+  
+  }
+  .profile-designation{
+    width: fit-content;
+    height: fit-content;
+    padding-top : 5px;
+    padding-bottom: 10px;
+    margin: 0%;
+    position: static;
+    top: 30px;
+    left: 0px;
+  }
+  
+  div.contact-info{
+    display: flex;
+    background-color: rgba(69, 76, 110, 0.5);
+    border-radius: 20px;
+    padding:20px;
+    margin: 10px;
+    align-items:baseline;
+    flex-direction: column;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+  div.contact-info p{
+    color: rgb(224, 242, 249);
+    text-align: justify;
+    padding: 3.5px;
+    margin: 0%;
+  }
+  div.contact-info p1{
+    color: rgb(224, 242, 249);
+    text-align: justify;
+    margin-top: 30px;
+  }
+  div.contact-info h1{
+    font-size: xx-large;
+    color: whitesmoke;
+  }
+  div.contact-info h2{
+    margin-bottom: 20px;
+    color: whitesmoke;
+  }
+  
+  .contact-extra{
+    margin-top: 30px;
+    min-width: 600px;
+    flex-wrap: wrap;
+    align-items:center;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .work-status{
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    background-color: #c7d6ed;
+  }
+  .project-status{
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    background-color: #c7d6ed;
+  }
+  .location-status{
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    background-color: #c7d6ed;
+  }
+  
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
