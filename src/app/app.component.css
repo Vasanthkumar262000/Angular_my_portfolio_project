@@ -6,7 +6,9 @@ body{
   }
   
   .App-contact{
-    padding: 8%
+    padding: 8%;
+    padding-bottom:0%;
+    padding-top:4%;
   }
   
   div.profile{
@@ -33,18 +35,34 @@ body{
     min-height: 36;
   }
   
-  a.profile_CV {
-    font-size: large;
+  #profile-CV {
+    font-size: large; 
+    text-decoration: none;
     width: fit-content;
     height: fit-content;
     position: relative;
     top: 20px;
     left: 85px;
     padding: 10px;
-    color: rgb(13, 37, 58);
-    background-color: #89b4f9;
+    color: rgb(0, 0, 0);
+    background-color: #4166a1;
     border-radius: 4px;
     box-sizing: border-box;
+  }
+  #profile-CV:hover{
+    background-color: #062454;
+    color: aliceblue;
+    transition: color 0.9s ease;
+  }
+  #profile-CV fa-icon {
+    font-size: 20px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+  #profile-CV fa-icon:hover {
+    font-size: 20px;
+    color: #ffffff;
+    transition: color 0.3s ease;
   }
   
   .profile-name{
@@ -83,7 +101,7 @@ body{
     padding: 3.5px;
     margin: 0%;
   }
-  div.contact-info p1{
+  div.contact-info h4{
     color: rgb(224, 242, 249);
     text-align: justify;
     margin-top: 30px;
@@ -128,7 +146,50 @@ body{
     border-radius: 5px;
     background-color: #c7d6ed;
   }
+
+  .contact{
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 2%;
+    padding-bottom: 8%;
+  }
   
+  .contact-links{
+    border-radius: 10px;
+    padding: 20px;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around ;
+    background-color: rgba(47, 51, 72, 0.5);
+  }
+  #linkedin-links fa-icon {
+    font-size: 50px;
+    color: #007bff;
+    transition: color 0.3s ease;
+  }
+  
+  #linkedin-links fa-icon:hover {
+    color: #3ac4ff;
+  }
+  #github-links fa-icon {
+    font-size: 50px;
+    color: #d4d4d4;
+    transition: color 0.3s ease;
+  }
+  
+  #github-links fa-icon:hover {
+    color: #808387;
+  }
+  #website-links fa-icon {
+    font-size: 50px;
+    color: #8ec3f8;
+    transition: color 0.3s ease;
+  }
+  
+  #website-links fa-icon:hover {
+    color: #0056b3;
+  }
   
   @keyframes App-logo-spin {
     from {
