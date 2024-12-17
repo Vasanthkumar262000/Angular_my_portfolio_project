@@ -52,7 +52,7 @@ body{
   #profile-CV:hover{
     background-color: #062454;
     color: aliceblue;
-    transition: color 0.9s ease;
+    transition: color 0.5s ease;
   }
   #profile-CV fa-icon {
     font-size: 20px;
@@ -151,7 +151,7 @@ body{
     padding-left: 30%;
     padding-right: 30%;
     padding-top: 2%;
-    padding-bottom: 8%;
+    padding-bottom: 2%;
   }
   
   .contact-links{
@@ -190,7 +190,745 @@ body{
   #website-links fa-icon:hover {
     color: #0056b3;
   }
-  
+
+  .skill{
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 2px;
+    padding-bottom: 3%;
+    
+  }
+  .skill-section{
+    background-color:rgba(47, 51, 72, 0.5);
+    border-radius: 10px;
+    padding: 5%;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+  }
+  .skill-links{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .skill-seperations{
+    align-items: justify;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+    max-width: 90%;
+    padding-left: 6%;
+  }
+
+  .skill-python{
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
+    padding: 2%;
+
+  }
+  .skill-python-link{
+    text-decoration: none;
+    color: aliceblue;
+
+  }
+  .skill-level-python{
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: flex;
+
+  }
+  .skill-level1-python{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level2-python{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level3-python{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level4-python{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level5-python{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+ 
+  .skill-java{
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
+    padding: 2%;
+  }
+  .skill-java-link{
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .skill-level-java{
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: flex;
+
+  }
+  .skill-level1-java{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level2-java{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level3-java{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level4-java{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level5-java{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+ 
+  .skill-csharp{
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
+    padding: 2%;
+  }
+  .skill-csharp-link{
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .skill-level-csharp{
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: flex;
+
+  }
+  .skill-level1-csharp{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level2-csharp{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level3-csharp{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level4-csharp{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level5-csharp{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+ 
+  .skill-javascript{
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
+    padding: 2%;
+  }
+  .skill-javascript-link{
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .skill-level-javascript{
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: flex;
+
+  }
+  .skill-level1-javascript{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level2-javascript{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level3-javascript{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level4-javascript{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level5-javascript{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+
+  .skill-react{
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
+    padding: 2%;
+  }
+  .skill-react-link{
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .skill-level-react{
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: flex;
+
+  }
+  .skill-level1-react{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level2-react{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level3-react{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level4-react{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level5-react{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+
+  .skill-typescript{
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
+    padding: 2%;
+  }
+  .skill-typescript-link{
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .skill-level-typescript{
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: flex;
+
+  }
+  .skill-level1-typescript{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level2-typescript{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level3-typescript{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level4-typescript{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level5-typescript{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+
+  .skill-next{
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
+    padding: 2%;
+  }
+  .skill-next-link{
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .skill-level-next{
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: flex;
+
+  }
+  .skill-level1-next{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level2-next{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level3-next{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level4-next{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level5-next{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+
+  .skill-materialui{
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
+    padding: 2%;
+  }
+  .skill-materialui-link{
+    text-decoration: none;
+    color: rgb(248, 248, 248);
+  }
+  .skill-level-materialui{
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: flex;
+
+  }
+  .skill-level1-materialui{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level2-materialui{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level3-materialui{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level4-materialui{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level5-materialui{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+
+
+  .skill-bootstrap{
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
+    padding: 2%;
+  }
+  .skill-bootstrap-link{
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .skill-level-bootstrap{
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: flex;
+
+  }
+  .skill-level1-bootstrap{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level2-bootstrap{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level3-bootstrap{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level4-bootstrap{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level5-bootstrap{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+
+  .skill-tailwind{
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
+    padding: 2%;
+  }
+  .skill-tailwind-link{
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .skill-level-tailwind{
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: flex;
+
+  }
+  .skill-level1-tailwind{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level2-tailwind{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level3-tailwind{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level4-tailwind{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level5-tailwind{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+
+  .skill-django{
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
+    padding: 2%;
+  }
+  .skill-django-link{
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .skill-level-django{
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: flex;
+
+  }
+  .skill-level1-django{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level2-django{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level3-django{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level4-django{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level5-django{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+
+  .skill-sql{
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
+    padding: 2%;
+  }
+  .skill-sql-link{
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .skill-level-sql{
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: flex;
+
+  }
+  .skill-level1-sql{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level2-sql{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level3-sql{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level4-sql{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level5-sql{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+
+  .skill-needed-link{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 30%;
+    padding-left: 6%;
+    color: #d4d4d4;
+  }
+  .skill-needed-aws{
+    background-color:#c9c9c9 ;
+    padding: 4px;
+    border-radius: 5px;
+  }
+  .skill-needed-astro{
+    background-color:#c9c9c9 ;
+    padding: 4px;
+    border-radius: 5px;
+  }
+
   @keyframes App-logo-spin {
     from {
       transform: rotate(0deg);
