@@ -14,16 +14,19 @@ body{
   div.profile{
     border-radius: 10px;
     padding: 15px;
-    min-height: fit-content;
+    flex-wrap: wrap;
     display: flex;
     flex-direction: row;
     background-color: rgba(47, 51, 72, 0.5);
+    width:auto;
+    height: auto;
   }
   
   div.profile-photo{
     margin: 10px;
     display: flex;
     flex-direction: column;
+    width: fit-content;
   }
   
   .App-logo{
@@ -64,67 +67,116 @@ body{
     color: #ffffff;
     transition: color 0.3s ease;
   }
+
+  .contact-info{
+    flex: 1;
+    display: flex;
+    background-color: rgba(69, 76, 110, 0.5);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    padding:20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-direction: column;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+  .contact-info p{
+    color: rgb(224, 242, 249);
+    padding: 3.5px;
+    margin: 0%;
+  }
+  .contact-info h4{
+    color: rgb(224, 242, 249);
+    text-align: justify;
+    margin-top: 30px;
+  }
+  .contact-info h1{
+    font-size: xx-large;
+    color: whitesmoke;
+  }
+  .contact-info h2{
+    margin-bottom: 20px;
+    color: whitesmoke;
+  }
+
+  .contact-name{
+    display: flex;
+    flex-direction: row;
+  }
   
   .profile-name{
     text-decoration-color: aliceblue;
-    width: fit-content;
-    height: fit-content;
     padding-top : 10px;
     margin: 0%;
-    position: static;
   
   }
   .profile-designation{
-    width: fit-content;
-    height: fit-content;
+    display: flex;
     padding-top : 5px;
     padding-bottom: 10px;
     margin: 0%;
-    position: static;
-    top: 30px;
-    left: 0px;
+  }
+
+  .contact-logo{ 
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: right;
+    padding: 10px; 
+
+    
+  }
+  #linkedin-logo fa-icon {
+    font-size: 30px;
+    color: #007bff;
+    transition: color 0.3s ease;
+    padding-left: 25px;
   }
   
-  div.contact-info{
+  #linkedin-logo fa-icon:hover {
+    color: #3ac4ff;
+  }
+  #github-logo fa-icon {
+    font-size: 30px;
+    color: #d4d4d4;
+    transition: color 0.3s ease;
+    padding-left: 25px;
+  }
+  
+  #github-logo fa-icon:hover {
+    color: #808387;
+  }
+  #upwork-logo fa-icon {
+    font-size: 30px;
+    color: #000000;
+    transition: color 0.3s ease;
+    padding-left: 25px;
+  }
+  
+  #upwork-logo fa-icon:hover {
+    color: #d5d5d5;
+  }
+
+  .contact-about{
     display: flex;
-    background-color: rgba(69, 76, 110, 0.5);
-    border-radius: 20px;
-    padding:20px;
-    margin: 10px;
+    color: #c9c9c9;
+    padding:10px;
+   
     align-items:baseline;
     flex-direction: column;
     font-family:Arial, Helvetica, sans-serif;
   }
-  div.contact-info p{
-    color: rgb(224, 242, 249);
-    text-align: justify;
-    padding: 3.5px;
-    margin: 0%;
-  }
-  div.contact-info h4{
-    color: rgb(224, 242, 249);
-    text-align: justify;
-    margin-top: 30px;
-  }
-  div.contact-info h1{
-    font-size: xx-large;
-    color: whitesmoke;
-  }
-  div.contact-info h2{
-    margin-bottom: 20px;
-    color: whitesmoke;
-  }
   
   .contact-extra{
-    margin-top: 30px;
-    min-width: 600px;
-    flex-wrap: wrap;
-    align-items:center;
-    font-size: 15px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    margin-top: 10px;
+    color: #000000;
+    font-size: 15px;
   }
+
   .work-status{
     padding: 3px;
     padding-left: 10px;
