@@ -11,18 +11,18 @@ body{
     padding-top:4%;
   }
   
-  div.profile{
+  .profile{
     border-radius: 10px;
     padding: 15px;
     flex-wrap: wrap;
     display: flex;
     flex-direction: row;
     background-color: rgba(47, 51, 72, 0.5);
-    width:auto;
-    height: auto;
+    width:fit-content;
+    height: fit-content;
   }
   
-  div.profile-photo{
+  .profile-photo{
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -980,6 +980,75 @@ body{
     padding: 4px;
     border-radius: 5px;
   }
+
+  .experiance{
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 2px;
+    padding-bottom: 3%;
+    
+  }
+  .experiance-section{
+    background-color:rgba(47, 51, 72, 0.5);
+    border-radius: 10px;
+    padding: 4%;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+  }
+  .experiance1-section{
+    padding-top: 20px;
+  }
+  .experiance2-section{
+    padding-top: 20px;
+  }
+  .experiance-heading{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .experiance-icon{
+    display: flex;
+    flex-direction: row;
+  }
+  .cognizant-logo{
+    padding-top: 15px;
+  }
+  .experiance-details{
+    padding-left: 10px;
+  }
+
+  .experiance-linkedin{
+    display: flex;
+    justify-content: right;
+    flex:1 ;
+  }
+  #experiance-linkedin fa-icon {
+    font-size: 30px;
+    color: #007bff;
+    transition: color 0.3s ease;
+  }
+  #experiance-linkedin fa-icon:hover {
+    color: #3ac4ff;
+  }
+
+  .experiance1-tech{
+    padding-bottom: 20px;
+  }
+  .experiance-tech-heading{
+    padding: 10px;
+  }
+  .experiance-tech-list{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between ;
+    text-decoration: none;
+    padding-left: 20px;
+    max-width: 60%;
+    flex-wrap: wrap;
+  }
+  
 
   @keyframes App-logo-spin {
     from {
