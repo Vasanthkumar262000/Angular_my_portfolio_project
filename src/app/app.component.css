@@ -6,7 +6,7 @@ body{
   }
   
   .App-contact{
-    padding: 8%;
+    padding: 10%;
     padding-bottom:0%;
     padding-top:4%;
   }
@@ -18,51 +18,44 @@ body{
     display: flex;
     flex-direction: row;
     background-color: rgba(47, 51, 72, 0.5);
-    width:fit-content;
-    height: fit-content;
+   
   }
   
   .profile-photo{
     margin: 10px;
     display: flex;
     flex-direction: column;
-    width: fit-content;
   }
   
-  .App-logo{
-    border-radius: 25px;
-    max-width: none ;
-    max-width: 52;
-    max-height: 52;
-    min-width: 36;
-    min-height: 36;
+  #profile-logo{
+    border-radius: 30px;
+    max-width:320px;
+    max-height: 320px;;
   }
-  
-  #profile-CV {
+  .profile-CV{
+    display: flex;
+    flex-direction: row;
     font-size: large; 
-    text-decoration: none;
-    width: fit-content;
-    height: fit-content;
-    position: relative;
-    top: 20px;
-    left: 85px;
-    padding: 10px;
-    color: rgb(0, 0, 0);
+    width: max-content;
+    align-self: center;
+    margin-top: 30px;
     background-color: #4166a1;
-    border-radius: 4px;
-    box-sizing: border-box;
+    border-radius: 30px;
+
+  }
+  #profile-CV{
+    background-color: #4269a7;
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    transition: color 0.5s ease;
   }
   #profile-CV:hover{
     background-color: #062454;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     transition: color 0.5s ease;
   }
   #profile-CV fa-icon {
-    font-size: 20px;
-    color: #ffffff;
-    transition: color 0.3s ease;
-  }
-  #profile-CV fa-icon:hover {
     font-size: 20px;
     color: #ffffff;
     transition: color 0.3s ease;
@@ -72,8 +65,6 @@ body{
     flex: 1;
     display: flex;
     background-color: rgba(69, 76, 110, 0.5);
-    width: fit-content;
-    height: fit-content;
     border-radius: 20px;
     padding:20px;
     margin-top: 10px;
@@ -122,6 +113,7 @@ body{
     display: flex;
     flex-direction: row;
     flex: 1;
+    flex-wrap: wrap;
     justify-content: right;
     padding: 10px; 
 
@@ -162,19 +154,18 @@ body{
     display: flex;
     color: #c9c9c9;
     padding:10px;
-   
-    align-items:baseline;
     flex-direction: column;
     font-family:Arial, Helvetica, sans-serif;
   }
   
   .contact-extra{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
     margin-top: 10px;
     color: #000000;
     font-size: 15px;
+    max-width: 90%;
   }
 
   .work-status{
@@ -244,8 +235,8 @@ body{
   }
 
   .skill{
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-top: 2px;
     padding-bottom: 3%;
     
@@ -266,13 +257,12 @@ body{
   }
 
   .skill-seperations{
-    align-items: justify;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 5px;
-    max-width: 90%;
     padding-left: 6%;
+    padding-bottom: 20px;
   }
 
   .skill-python{
@@ -982,8 +972,8 @@ body{
   }
 
   .experiance{
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-top: 2px;
     padding-bottom: 3%;
     
@@ -1049,6 +1039,138 @@ body{
     flex-wrap: wrap;
   }
   
+  .education{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2px;
+    padding-bottom: 3%;
+  }
+  .education-section{
+    background-color:rgba(47, 51, 72, 0.5);
+    border-radius: 10px;
+    padding: 4%;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+  }
+  .education-items{
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .education-content{
+    display: flex;
+    flex-direction: row;
+  }
+  .education-link{
+    display: flex;
+    justify-content: right;
+    flex: 1;
+  }
+  #education-link fa-icon {
+    font-size: 30px;
+    color: #8ec3f8;
+    transition: color 0.3s ease;
+  }
+  
+  #education-link fa-icon:hover {
+    color: #0056b3;
+  }
+
+  .education-logo{
+    padding-top: 20px;
+  }
+  .education-details{
+    padding-left: 20px;
+  }
+
+  .favorites{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2px;
+    padding-bottom: 3%;
+  }
+  .favorites-section{
+    background-color:rgba(47, 51, 72, 0.5);
+    border-radius: 10px;
+    padding: 4%;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+  }
+  .favorites-book-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .favorites-specificbook{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  #book:hover {
+    transform: translateY(10px);
+  }
+  .book{
+    border-radius: 10px;
+  }
+  .book-name{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    max-width: 250px; 
+  }
+  .book-author{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+  }
+
+  .favorites-people{
+    padding-top: 80px;
+  }
+  .favorites-people-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .people-name{
+    padding-top: 15px;
+  }
+
+  .favorites-media{
+    padding-top: 80px;
+  }
+  .favorites-media-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .media-name{
+    padding-top: 10px;
+  }
+  .media{
+    border-radius: 20px;
+  }
+  #media:hover {
+    transform: translateY(-16px);
+  }
+
+
+
+
+
+
+
+
+
+
+
 
   @keyframes App-logo-spin {
     from {

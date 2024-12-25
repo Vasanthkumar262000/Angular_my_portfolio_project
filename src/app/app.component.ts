@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faJava, faLinkedin, faPython, faGithub, faJs, faReact, faSquareJs, faBootstrap, faUpwork, faGit} from '@fortawesome/free-brands-svg-icons';
+import { faJava, faLinkedin, faPython, faGithub, faJs, faReact, faSquareJs, faBootstrap, faUpwork, faGit, faHtml5} from '@fortawesome/free-brands-svg-icons';
 import { faGlobe,faFilePdf,faHome, faDatabase, faServer, faCode } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -30,5 +30,6 @@ export class AppComponent {
     library.addIcons(faUpwork);
     library.addIcons(faGit);
     library.addIcons(faCode);
+    library.addIcons(faHtml5);
   }
 }
