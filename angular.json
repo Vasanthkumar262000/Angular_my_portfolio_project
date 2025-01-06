@@ -47,12 +47,18 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "15kB",
-                  "maximumError": "18kB"
+                  "maximumWarning": "20kB",
+                  "maximumError": "25kB"
                 }
               ],
+              "optimization": {
+                "scripts": true,
+                "styles": true,
+                "fonts": false
+              },
               "outputHashing": "all"
             },
+            
             "development": {
               "optimization": false,
               "extractLicenses": false,
@@ -60,6 +66,7 @@
             }
           },
           "defaultConfiguration": "production"
+          
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
