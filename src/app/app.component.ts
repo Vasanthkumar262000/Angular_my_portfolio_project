@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faJava, faLinkedin, faPython, faGithub, faJs, faReact, faSquareJs, faBootstrap, faUpwork, faGit, faHtml5} from '@fortawesome/free-brands-svg-icons';
-import { faGlobe,faFilePdf,faHome, faDatabase, faServer, faCode } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe,faFilePdf,faHome, faDatabase, faServer, faCode, faUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +13,13 @@ import { faGlobe,faFilePdf,faHome, faDatabase, faServer, faCode } from '@fortawe
 })
 export class AppComponent {
   title = 'my_portfolio_project';
+
+  showAppContact = true;
+  showskill = true;
+  showContact = true;
+  showexperiance = true;
+  showeducation = true;
+  showfavorites = true;
 
   constructor(library: FaIconLibrary) {
     library.addIcons(faLinkedin);
@@ -31,5 +38,26 @@ export class AppComponent {
     library.addIcons(faGit);
     library.addIcons(faCode);
     library.addIcons(faHtml5);
+    library.addIcons(faUser)
+  }
+ toggleSection(section: string) {
+    switch (section) {
+      case 'App-contact':
+        this.showAppContact = !this.showAppContact;
+        break;
+      case 'skill':
+        this.showskill = !this.showskill;
+        break;
+      case 'experiance':
+        this.showexperiance = !this.showexperiance;
+        break;
+      case 'education':
+        this.showeducation = !this.showeducation;
+        break;
+      case 'favorites':
+        this.showfavorites = !this.showfavorites;
+        break;
+
+    }
   }
 }
