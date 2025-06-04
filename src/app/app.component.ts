@@ -60,4 +60,8 @@ export class AppComponent {
 
     }
   }
+  toggleLightMode() {
+ 
+    document.body.classList.toggle('dark-theme');
+  }
 }
