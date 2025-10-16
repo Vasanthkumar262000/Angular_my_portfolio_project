@@ -44,6 +44,13 @@ main{
     border-radius: 30px;
 
   }
+  .profile-name{
+    font-size: 45px;
+    font-weight: bold;
+    padding-top : 10px;
+    margin: 0%;
+  
+  }
   #profile-CV{
     background-color: #4269a7;
     padding: 10px;
@@ -61,6 +68,30 @@ main{
     color: #ffffff;
     transition: color 0.3s ease;
   }
+  .rolling-anim-section{
+    display:flex;
+    flex-direction: row;
+    font-size: x-large;
+    color: aliceblue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    
+  }
+      .nonrolling-text{
+      width: fit-content; 
+      color: aliceblue;
+      font-weight: bold;
+      font-size: 40px;
+      }
+      .rolling-text{
+        width: fit-content;
+        color: #00ffff;
+        font-weight: bold;
+        font-size: 40px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+      }
 
   .contact-info{
     flex: 1;
@@ -98,12 +129,13 @@ main{
   }
   
   .profile-name{
-    text-decoration-color: aliceblue;
+    color: aliceblue;
     padding-top : 10px;
     margin: 0%;
   
   }
   .profile-designation{
+    text-decoration-color: aliceblue;
     display: flex;
     padding-top : 5px;
     padding-bottom: 10px;
@@ -1161,6 +1193,7 @@ main{
   #media:hover {
     transform: translateY(-16px);
   }
+
 
 
 

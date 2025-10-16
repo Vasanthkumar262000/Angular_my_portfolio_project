@@ -3,11 +3,14 @@ import { RouterOutlet } from '@angular/router';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faJava, faLinkedin, faPython, faGithub, faJs, faReact, faSquareJs, faBootstrap, faUpwork, faGit, faHtml5} from '@fortawesome/free-brands-svg-icons';
 import { faGlobe,faFilePdf,faHome, faDatabase, faServer, faCode, faUser } from '@fortawesome/free-solid-svg-icons';
+import { SplitTextComponent } from './components/split-text.component'; // <-- add this
+import { HoverGlowDirective } from './components/hover-glow.direction';
+import { RotatingTextComponent } from './components/rotating-text.component';
 
-@Component({
+@Component({  
   selector: 'app-root',
   standalone: true, // Declare it as a standalone component
-  imports: [FontAwesomeModule, RouterOutlet], // Import necessary modules
+  imports: [FontAwesomeModule, RouterOutlet,SplitTextComponent, HoverGlowDirective, RotatingTextComponent], // Import necessary modules
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'] // Corrected 'styleUrl' to 'styleUrls'
 })
@@ -59,5 +62,8 @@ export class AppComponent {
         break;
 
     }
+  }
+    handleAnimationComplete() {
+    console.log('All letters have animated!');
   }
 }

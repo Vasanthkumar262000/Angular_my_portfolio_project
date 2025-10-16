@@ -2,3 +2,70 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.hover-glow {
+  position: relative;
+  overflow: hidden;  /* clip the halo to section bounds; remove if you prefer spill */
+}
+
+.hover-glow .glow-halo {
+  position: absolute;
+  width: var(--halo-size, 260px);
+  height: var(--halo-size, 260px);
+  left: var(--gx, 50%);
+  top: var(--gy, 50%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--halo-color, rgba(99,102,241,.45)) 0%, transparent 60%);
+  filter: blur(28px);
+  opacity: 0;
+  transition: opacity .18s ease, transform .18s ease;
+  z-index: 0;
+}
+
+.hover-glow.is-hovering .glow-halo {
+  opacity: .75;
+}
+.hover-glow > * { position: relative; z-index: 1; }
+
+/* Container chip look; Tailwind: px-2 sm:px-2 md:px-3 bg-cyan-300 text-black
+   py-0.5 sm:py-1 md:py-2 justify-center rounded-lg overflow-hidden */
+.rotating-chip {
+  display: inline-flex;
+  justify-content: center;
+  color: #F0FFFF;                 /* text-black */
+  background: #080a2b;         /* bg-cyan-300 (Tailwind’s color) */
+  border-radius: 0.5rem;       /* rounded-lg ≈ 8px */
+  overflow: hidden;
+
+  /* base padding ~ Tailwind px-2 / py-0.5 */
+  padding: 0.125rem 0.5rem;    /* 0.5 = 8px left/right; 0.125 = 2px top/bottom */
+}
+
+/* sm: (≥640px) -> py-1 */
+@media (min-width: 640px) {
+  .rotating-chip { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+}
+
+/* md: (≥768px) -> px-3 & py-2 */
+@media (min-width: 768px) {
+  .rotating-chip { padding: 0.5rem 0.75rem; } /* 0.5 = 8px top/bottom, 0.75 = 12px left/right */
+}
+
+/* Wrapper for each split group; Tailwind: overflow-hidden pb-0.5 sm:pb-1 md:pb-1 */
+.rotating-split {
+  overflow: hidden;
+  padding-bottom: 0.125rem;
+}
+@media (min-width: 640px) {
+  .rotating-split { padding-bottom: 0.25rem; }
+}
+@media (min-width: 768px) {
+  .rotating-split { padding-bottom: 0.25rem; }
+}
+
+/* Optional: extra per-character styling if you pass elementLevelClassName */
+.rotating-char {
+  /* example: font-weight: 600; letter-spacing: .02em; */
+}
+
