@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faJava, faLinkedin, faPython, faGithub, faJs, faReact, faSquareJs, faBootstrap, faUpwork, faGit, faHtml5} from '@fortawesome/free-brands-svg-icons';
-import { faGlobe,faFilePdf,faHome, faDatabase, faServer, faCode, faUser, faArrowUp, faBriefcase, faFolder, faCertificate, faGraduationCap, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe,faFilePdf,faHome, faDatabase, faServer, faCode, faUser, faArrowUp, faBriefcase, faFolder, faCertificate, faGraduationCap, faStar,} from '@fortawesome/free-solid-svg-icons';
 import { SplitTextComponent } from './components/split-text.component'; // <-- add this
 import { HoverGlowDirective } from './components/hover-glow.direction';
 import { RotatingTextComponent } from './components/rotating-text.component';
