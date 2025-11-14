@@ -3,6 +3,77 @@ main{
     background-color: #0b1120;
     text-decoration: rgb(198, 220, 239);
     font-family:Arial, Helvetica, sans-serif;
+    position: relative; /* Allows absolute positioning of side nav */
+  }
+
+  /* Side Navigation Bar Styles */
+  .side-nav {
+    position: fixed;           /* Fixed position so it stays in place when scrolling */
+    right: 60px;              /* 30px from right edge of viewport */
+    top: 29%;                 /* Center vertically */
+    transform: translateY(-50%); /* Perfect vertical centering */
+    z-index: 999;             /* Below scroll-to-top button but above content */
+    background-color: rgba(78, 86, 120, 0.605); /* White background with slight transparency */
+    border-radius: 15px;      /* Rounded corners */
+    padding: 20px 12px;       /* Padding around the navigation items */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    backdrop-filter: blur(10px); /* Blur effect for modern look */
+    box-shadow: 0 2px 8px rgba(29, 32, 53, 0.4);
+  }
+
+  .nav-list {
+    list-style: none;         /* Remove default list bullets */
+    margin: 0;                 /* Remove default margin */
+    padding: 0;               /* Remove default padding */
+    display: flex;             /* Flexbox for vertical layout */
+    flex-direction: column;   /* Stack items vertically */
+    gap: 15px;                /* Space between navigation items */
+  }
+
+  .nav-item {
+    width: 45px;              /* Fixed width for circular button */
+    height: 45px;             /* Fixed height for circular button */
+    display: flex;            /* Flexbox for centering icon */
+    align-items: center;      /* Vertically center icon */
+    justify-content: center;  /* Horizontally center icon */
+    border-radius: 12px;      /* Rounded corners (slightly rounded square) */
+    cursor: pointer;          /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for all property changes */
+    background-color: transparent; /* Transparent by default */
+    color: #f1f6ff;           /* Gray color for inactive icons */
+  }
+
+  .nav-item fa-icon {
+    font-size: 20px;          /* Icon size */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+
+  /* Active state - highlighted with orange background */
+  .nav-item.active {
+    background-color: #869fc8; /* Orange background matching the image */
+    color: #0a0303;            /* White icon color when active */
+    transform: scale(1.1);      /* Slightly larger when active */
+    box-shadow: 0 2px 8px rgba(1, 7, 66, 0.4); /* Orange shadow for active state */
+  }
+
+  .nav-item.active fa-icon {
+    color: #000000;            /* White icon when active */
+  }
+
+  /* Hover effect for navigation items */
+  .nav-item:hover:not(.active) {
+    background-color: rgba(90, 172, 250, 0.588); /* Light orange background on hover */
+    color: #ffffff;            /* Orange icon color on hover */
+    transform: translateX(-3px); /* Slight left movement on hover */
+  }
+
+  .nav-item:hover:not(.active) fa-icon {
+    color: #131a4e;            /* Orange icon on hover */
+  }
+
+  /* Active hover state */
+  .nav-item.active:hover fa-icon {
+    color: #ffffff;            /* White icon when active */
   }
   
   .App-contact{
@@ -1213,5 +1284,41 @@ main{
     to {
       transform: rotate(360deg);
     }
+  }
+
+  /* Scroll to Top Button Styles */
+  .scroll-top-btn {
+    position: fixed;           /* Fixed position so it stays in place when scrolling */
+    bottom: 60px;               /* 30px from bottom of viewport */
+    right: 60px;                /* 30px from right edge of viewport */
+    width: 50px;                /* Button width */
+    height: 50px;               /* Button height (makes it circular) */
+    background-color: #4166a1;  /* Background color matching your theme */
+    border: none;               /* Remove default button border */
+    border-radius: 50%;         /* Makes button circular */
+    color: #ffffff;             /* White icon color */
+    font-size: 20px;            /* Icon size */
+    cursor: pointer;            /* Pointer cursor on hover */
+    z-index: 1000;              /* Ensures button appears above other content */
+    display: flex;              /* Flexbox for centering icon */
+    align-items: center;        /* Vertically center icon */
+    justify-content: center;     /* Horizontally center icon */
+    transition: all 0.3s ease;  /* Smooth transition for all property changes */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    opacity: 0.9;               /* Slightly transparent */
+  }
+
+  /* Hover effect for scroll-to-top button */
+  .scroll-top-btn:hover {
+    background-color: #062454;  /* Darker blue on hover (matches your CV button hover) */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+    opacity: 1;                 /* Fully opaque on hover */
+  }
+
+  /* Active state (when button is clicked) */
+  .scroll-top-btn:active {
+    transform: translateY(-1px); /* Slight press effect */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Reduced shadow when pressed */
   }
   

@@ -1,4 +1,31 @@
 <main class="main">
+      <!-- Side Navigation Bar -->
+      <nav class="side-nav">
+        <ul class="nav-list">
+          <li class="nav-item" [class.active]="activeSection === 'App-contact'" (click)="scrollToSection('App-contact')" title="Profile">
+            <fa-icon [icon]="['fas', 'user']"></fa-icon>
+          </li>
+          <li class="nav-item" [class.active]="activeSection === 'skill'" (click)="scrollToSection('skill')" title="Skills">
+            <fa-icon [icon]="['fas', 'code']"></fa-icon>
+          </li>
+          <li class="nav-item" [class.active]="activeSection === 'experiance'" (click)="scrollToSection('experiance')" title="Work Experience">
+            <fa-icon [icon]="['fas', 'briefcase']"></fa-icon>
+          </li>
+          <li class="nav-item" [class.active]="activeSection === 'projects'" (click)="scrollToSection('projects')" title="Projects">
+            <fa-icon [icon]="['fas', 'folder']"></fa-icon>
+          </li>
+          <li class="nav-item" [class.active]="activeSection === 'certifications'" (click)="scrollToSection('certifications')" title="Certifications">
+            <fa-icon [icon]="['fas', 'certificate']"></fa-icon>
+          </li>
+          <li class="nav-item" [class.active]="activeSection === 'education'" (click)="scrollToSection('education')" title="Education">
+            <fa-icon [icon]="['fas', 'graduation-cap']"></fa-icon>
+          </li>
+          <li class="nav-item" [class.active]="activeSection === 'favorites'" (click)="scrollToSection('favorites')" title="My Favorites">
+            <fa-icon [icon]="['fas', 'star']"></fa-icon>
+          </li>
+        </ul>
+      </nav>
+
       <section id="App-contact" class="App-contact">
         <div id="profile" class="profile">
           <div id="profile-photo" class="profile-photo">
@@ -136,7 +163,7 @@
         </div>
       </section>
 
-      <section class="skill">
+      <section id="skill" class="skill">
         <div id="skill-section" class="skill-section">
           <h1 class="skill-heading"> Skills </h1>
           <div id="skill-links" class="skill-links">
@@ -319,7 +346,7 @@
         </div>
       </section>
 
-      <section  class="experiance">
+      <section id="experiance" class="experiance">
         <div id="experiance-section" class="experiance-section">
           <h1>Work experiance</h1>
           <div id="experiance1-section" class="experiance1-section">
@@ -627,5 +654,15 @@
           </div>
         </div>
       </section>
+
+      <!-- Scroll to Top Button -->
+      <button 
+        *ngIf="showScrollTop" 
+        (click)="scrollToTop()" 
+        class="scroll-top-btn"
+        aria-label="Scroll to top"
+        title="Scroll to top">
+        <fa-icon [icon]="['fas', 'arrow-up']"></fa-icon>
+      </button>
 </main>
 <router-outlet/>
