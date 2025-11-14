@@ -26,6 +26,50 @@ export class AppComponent {
   showfavorites = true;
   showScrollTop = false; // Controls visibility of scroll-to-top button
   activeSection = 'App-contact'; // Tracks the currently active section in navigation
+  certifications = [
+    {
+      id: 'cert-1',
+      title: 'AWS Certified AI Practitioner',
+      issuer: 'Amazon Web Services',
+      image: '/certificates/cert1.png',
+      link: 'https://www.credly.com/badges/fb6e256c-97a7-40b4-9e47-438ba8a78cb6/public_url'
+    },
+    {
+      id: 'cert-2',
+      title: 'AWS Machine Learning Engineer - Associate',
+      issuer: 'Amazon Web Services',
+      image: '/certificates/cert2.png',
+      link: 'https://www.credly.com/earner/earned/badge/7d785f20-281e-4182-9e88-d04df1a3e48c'
+    },
+    {
+      id: 'cert-3',
+      title: 'Microsoft Certified: Python Developer',
+      issuer: 'Microsoft',
+      image: '/certificates/cert3.png',
+      link: 'https://www.coursera.org/account/accomplishments/professional-cert/OGTX4B32ESIG'
+    },
+    {
+      id: 'cert-4',
+      title: 'Google AI Essentials',
+      issuer: 'Google',
+      image: '/certificates/cert4.png',
+      link: 'https://www.coursera.org/account/accomplishments/specialization/0UZ2X9F8ODSQ'
+    },
+    {
+      id: 'cert-5',
+      title: 'IBM Genrative AI Application Developer',
+      issuer: 'IBM',
+      image: '/certificates/cert5.png',
+      link: 'https://www.coursera.org/account/accomplishments/verify/HFR5R9VULWVP'
+    },
+    {
+      id: 'cert-6',
+      title: 'Programming Fundamentals with JavaScript, HTML and CSS',
+      issuer: 'Duke',
+      image: '/certificates/cert6.png',
+      link: 'https://www.coursera.org/account/accomplishments/certificate/HFR5R9VULWVP'
+    }
+  ];
 
   constructor(library: FaIconLibrary) {
     library.addIcons(faLinkedin);
@@ -128,5 +172,10 @@ export class AppComponent {
     if (window.scrollY < 100) {
       this.activeSection = 'App-contact';
     }
+  }
+
+  openCertification(link?: string): void {
+    if (!link) { return; }
+    window.open(link, '_blank', 'noopener');
   }
 }
