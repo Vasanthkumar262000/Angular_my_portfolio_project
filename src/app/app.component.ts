@@ -26,6 +26,8 @@ export class AppComponent {
   showfavorites = true;
   showScrollTop = false; // Controls visibility of scroll-to-top button
   activeSection = 'App-contact'; // Tracks the currently active section in navigation
+  isMobile = false; // Track if we're on mobile view
+
   certifications = [
     {
       id: 'cert-1',
@@ -82,6 +84,8 @@ export class AppComponent {
     library.addIcons(faJs);
     library.addIcons(faReact);
     library.addIcons(faSquareJs);
+    // Check initial screen size for mobile detection
+    this.checkMobile();
     library.addIcons(faBootstrap);
     library.addIcons(faDatabase);
     library.addIcons(faUpwork);
@@ -95,7 +99,28 @@ export class AppComponent {
     library.addIcons(faCertificate); // Certificate icon for Certifications
     library.addIcons(faGraduationCap); // Graduation cap icon for Education
     library.addIcons(faStar); // Star icon for Favorites
+    // Check initial screen size for mobile detection
+    this.checkMobile();
   }
+
+  // Check if screen is mobile size
+  checkMobile(): void {
+    if (typeof window !== 'undefined') {
+      this.isMobile = window.innerWidth <= 768;
+    }
+  }
+
+  // Get text alignment based on screen size
+  getProfileNameAlign(): 'left' | 'center' {
+    return this.isMobile ? 'center' : 'left';
+  }
+
+  // Listen to window resize to update mobile detection
+  @HostListener('window:resize', ['$event'])
+  onResize(): void {
+    this.checkMobile();
+  }
+
  toggleSection(section: string) {
     switch (section) {
       case 'App-contact':

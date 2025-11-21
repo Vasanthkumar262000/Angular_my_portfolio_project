@@ -54,7 +54,7 @@
                   [to]="{ opacity: 1, y: 0 }"
                   [threshold]="0.15"
                   rootMargin="-80px"
-                  textAlign="left"
+                  [textAlign]="getProfileNameAlign()"
                   tag="h1"
                   (letterAnimationComplete)="handleAnimationComplete()">
                 </app-split-text>
@@ -72,7 +72,7 @@
                   [to]="{ opacity: 1, y: 0 }"
                   [threshold]="0.15"
                   rootMargin="-80px"
-                  textAlign="left"
+                  textAlign="center"
                   tag="h2"
                   (letterAnimationComplete)="handleAnimationComplete()">
                 </app-split-text>
