@@ -1451,4 +1451,944 @@ main{
     transform: translateY(-1px); /* Slight press effect */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Reduced shadow when pressed */
   }
+
+  /* ============================================
+     MOBILE RESPONSIVE STYLES (Tablets & Below)
+     ============================================ */
+  
+  @media (max-width: 768px) {
+    /* Hide side navigation bar on mobile */
+    .side-nav {
+      display: none !important;
+    }
+
+    /* Main container adjustments */
+    main {
+      padding: 0;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+      box-sizing: border-box;
+    }
+
+    /* Prevent horizontal overflow globally */
+    * {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    section {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    /* Profile/Contact Section - Mobile */
+    .App-contact {
+      padding: 15px 10px;
+      padding-top: 20px;
+      padding-bottom: 15px;
+      width: 100%;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    .profile {
+      flex-direction: column;
+      align-items: center;
+      padding: 15px 10px;
+      gap: 15px;
+      width: 100%;
+      box-sizing: border-box;
+      max-width: 100%;
+    }
+
+    .profile-photo {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    #App-logo {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    #profile-logo {
+      max-width: 220px;
+      max-height: 220px;
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+
+    .profile-CV {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+      box-sizing: border-box;
+    }
+
+    .profile-cv-link {
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
+      padding: 12px 20px;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-sizing: border-box;
+      white-space: nowrap;
+    }
+
+    .contact-info {
+      width: 100%;
+      max-width: 100%;
+      padding: 15px 10px;
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    .contact-name {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .name-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .name-section app-split-text {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    .name-section app-split-text h1,
+    .name-section app-split-text h2 {
+      text-align: center;
+    }
+
+    .profile-name {
+      font-size: 22px;
+      text-align: center;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      box-sizing: border-box;
+    }
+
+    .profile-designation {
+      font-size: 13px;
+      text-align: center;
+      width: 100%;
+      max-width: 100%;
+      margin: 8px 0;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      box-sizing: border-box;
+      line-height: 1.4;
+    }
+
+    .rolling-anim-section {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      padding-top: 15px;
+      flex-wrap: wrap;
+      gap: 5px;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .nonrolling-text{
+      font-size: 30px;
+      margin: 0;
+      flex-shrink: 0;
+      font-weight: bold;
+      display: none; /* Hide "I'm a" text on mobile */
+    }
+
+    .nonrolling-text p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .rolling-text {
+      font-size: 30px;
+      padding-left: 0;
+      flex: 1;
+      min-width: 0;
+      font-weight: bold;
+    }
+
+    .contact-logo {
+      justify-content: center;
+      padding: 20px 0;
+      width: 100%;
+      display: flex;
+      gap: 15px;
+    }
+
+    #linkedin-logo,
+    #github-logo,
+    #upwork-logo {
+      padding: 0;
+    }
+
+    #linkedin-logo fa-icon,
+    #github-logo fa-icon,
+    #upwork-logo fa-icon {
+      font-size: 28px;
+    }
+
+    .contact-info p {
+      font-size: 13px;
+      padding: 5px 0;
+      text-align: center;
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      box-sizing: border-box;
+    }
+
+    .contact-about {
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+      padding: 12px 0;
+      box-sizing: border-box;
+    }
+
+    .contact-about h4 {
+      font-size: 13px;
+      line-height: 1.6;
+      margin-top: 15px;
+      text-align: left;
+      text-align-last: left;
+      width: 100%;
+      max-width: 100%;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      box-sizing: border-box;
+      padding: 0 5px;
+    }
+
+    .contact-extra {
+      flex-direction: column;
+      gap: 10px;
+      max-width: 100%;
+      width: 100%;
+      margin-top: 15px;
+      box-sizing: border-box;
+    }
+
+    .work-status,
+    .project-status,
+    .location-status {
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+      padding: 8px 12px;
+      font-size: 13px;
+      box-sizing: border-box;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    /* Contact Links Section - Mobile */
+    .contact {
+      padding: 20px 15px;
+    }
+
+    .contact-links {
+      padding: 20px;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    #linkedin-links,
+    #github-links,
+    #website-links {
+      display: flex;
+      justify-content: center;
+    }
+
+    #linkedin-links fa-icon,
+    #github-links fa-icon,
+    #website-links fa-icon {
+      font-size: 45px;
+    }
+
+    /* Skills Section - Mobile */
+    .skill {
+      padding: 20px 15px;
+    }
+
+    .skill-section {
+      padding: 25px 20px;
+    }
+
+    .skill-heading {
+      font-size: 26px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .skill-category h4 {
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .skill-seperations {
+      flex-direction: column;
+      padding-left: 0;
+      gap: 20px;
+      width: 100%;
+    }
+
+    .skill-python,
+    .skill-java,
+    .skill-csharp,
+    .skill-javascript,
+    .skill-react,
+    .skill-typescript,
+    .skill-next,
+    .skill-materialui,
+    .skill-bootstrap,
+    .skill-tailwind,
+    .skill-django,
+    .skill-sql {
+      flex-direction: column;
+      width: 100%;
+      padding: 15px;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .skill-name-python,
+    .skill-name-java,
+    .skill-name-csharp,
+    .skill-name-javascript,
+    .skill-name-react,
+    .skill-name-typescript,
+    .skill-name-next,
+    .skill-name-materialui,
+    .skill-name-bootstrap,
+    .skill-name-tailwind,
+    .skill-name-django,
+    .skill-name-sql {
+      width: 100%;
+    }
+
+    .skill-python-link,
+    .skill-java-link,
+    .skill-csharp-link,
+    .skill-javascript-link,
+    .skill-react-link,
+    .skill-typescript-link,
+    .skill-next-link,
+    .skill-materialui-link,
+    .skill-bootstrap-link,
+    .skill-tailwind-link,
+    .skill-django-link,
+    .skill-sql-link {
+      font-size: 16px;
+    }
+
+    .skill-level-python,
+    .skill-level-java,
+    .skill-level-csharp,
+    .skill-level-javascript,
+    .skill-level-react,
+    .skill-level-typescript,
+    .skill-level-next,
+    .skill-level-materialui,
+    .skill-level-bootstrap,
+    .skill-level-tailwind,
+    .skill-level-django,
+    .skill-level-sql {
+      width: 100%;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    /* Experience Section - Mobile */
+    .experiance {
+      padding: 20px 15px;
+    }
+
+    .experiance-section {
+      padding: 25px 20px;
+    }
+
+    .experiance-section h1 {
+      font-size: 26px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .experiance1-section,
+    .experiance2-section {
+      position: relative;
+      padding: 20px 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .experiance-heading {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 15px;
+      position: relative;
+      padding-bottom: 15px;
+      padding-right: 50px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .experiance-icon {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .cognizant-logo {
+      width: 70px !important;
+      height: 70px !important;
+      flex-shrink: 0;
+    }
+
+    .experiance-details {
+      flex: 1;
+      min-width: 0;
+      padding-left: 0;
+    }
+
+    .experiance-linkedin {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+    }
+
+    #experiance-linkedin fa-icon {
+      font-size: 24px;
+    }
+
+    .experiance-details {
+      padding-left: 0;
+      flex: 1;
+      min-width: 0;
+      padding-right: 10px;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .experiance-details h3 {
+      font-size: 18px;
+      margin: 0 0 8px 0;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .experiance-details p {
+      font-size: 14px;
+      margin: 4px 0;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .experiance1-about,
+    .experiance2-about {
+      padding: 15px 0;
+    }
+
+    .experiance1-about ul,
+    .experiance2-about ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .experiance1-about li,
+    .experiance2-about li {
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .experiance1-tech,
+    .experiance2-tech {
+      padding: 15px 0;
+    }
+
+    .experiance-tech-heading {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .experiance-tech-list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      max-width: 100%;
+      padding-left: 0;
+      gap: 12px;
+      justify-content: flex-start;
+    }
+
+    .experiance-tech-dotnet,
+    .experiance-tech-csharp,
+    .experiance-tech-mssql,
+    .experiance-tech-git {
+      font-size: 14px;
+    }
+
+    /* Certifications Section - Mobile */
+    .certifications {
+      padding: 15px 10px;
+      width: 100%;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    .certifications-section {
+      padding: 20px 15px;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 20px;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .section-header h2 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .section-header p {
+      font-size: 13px;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      padding: 0 5px;
+    }
+
+    .cert-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .cert-card {
+      padding: 15px;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    .cert-card:nth-child(5),
+    .cert-card:nth-child(6) {
+      grid-column: 1;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .cert-image {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      padding: 8px;
+    }
+
+    .cert-image img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      object-fit: contain;
+    }
+
+    .cert-info {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      padding: 10px 0 0 0;
+    }
+
+    .cert-info h3 {
+      font-size: 15px;
+      text-align: center;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      margin: 0 0 8px 0;
+      line-height: 1.4;
+    }
+
+    .cert-issuer {
+      font-size: 13px;
+      text-align: center;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      margin: 0;
+    }
+
+    /* Education Section - Mobile */
+    .education {
+      padding: 20px 15px;
+    }
+
+    .education-section {
+      padding: 25px 20px;
+    }
+
+    .education-section h2 {
+      font-size: 26px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .education-items {
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+      padding: 20px 0;
+    }
+
+    .education-content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .education-logo img {
+      width: 70px !important;
+      height: 70px !important;
+      flex-shrink: 0;
+    }
+
+    .education-link {
+      position: absolute;
+      top: 20px;
+      right: 0;
+    }
+
+    .education-details {
+      padding-left: 0;
+      flex: 1;
+    }
+
+    .education-details h3 {
+      font-size: 18px;
+      margin: 0 0 8px 0;
+    }
+
+    .education-details p {
+      font-size: 14px;
+      margin: 4px 0;
+    }
+
+    /* Favorites Section - Mobile */
+    .favorites {
+      padding: 20px 15px;
+    }
+
+    .favorites-section {
+      padding: 25px 20px;
+    }
+
+    .favorites-section h2 {
+      font-size: 26px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .favorites-book h3,
+    .favorites-people h3,
+    .favorites-media h3 {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .favorites-book-section {
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .favorites-specificbook,
+    .favorites-specificbook1 {
+      width: 100%;
+      max-width: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .book {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+    }
+
+    .book-details {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .book-name {
+      font-size: 15px;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .book-author {
+      font-size: 13px;
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .favorites-people {
+      padding-top: 30px;
+    }
+
+    .favorites-people-section {
+      flex-direction: row;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .people-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .people-details img {
+      width: 80px !important;
+      height: 80px !important;
+    }
+
+    .people-name {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .favorites-media {
+      padding-top: 30px;
+    }
+
+    .favorites-media-section {
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .media-details {
+      width: 100%;
+      max-width: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .media-details img {
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+    }
+
+    .media-name {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .media-type {
+      text-align: center;
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    /* Scroll to Top Button - Mobile */
+    .scroll-top-btn {
+      bottom: 20px;
+      right: 20px;
+      width: 45px;
+      height: 45px;
+      font-size: 18px;
+    }
+  }
+
+  /* Extra Small Devices (Phones) */
+  @media (max-width: 480px) {
+    .App-contact {
+      padding: 12px 8px;
+      padding-top: 18px;
+      padding-bottom: 12px;
+    }
+
+    .profile {
+      padding: 12px 8px;
+    }
+
+    #profile-logo {
+      max-width: 200px;
+      max-height: 200px;
+    }
+
+    .profile-cv-link {
+      max-width: 100%;
+      font-size: 13px;
+      padding: 10px 16px;
+    }
+
+    .contact-info {
+      padding: 12px 8px;
+    }
+
+    .profile-name {
+      font-size: 20px;
+    }
+
+    .profile-designation {
+      font-size: 12px;
+    }
+
+    .nonrolling-text {
+      font-size: 18px;
+    }
+
+    .rolling-text {
+      font-size: 18px;
+    }
+
+    .contact-info p {
+      font-size: 12px;
+    }
+
+    .contact-about h4 {
+      font-size: 12px;
+      padding: 0 3px;
+    }
+
+    .work-status,
+    .project-status,
+    .location-status {
+      font-size: 12px;
+      padding: 7px 10px;
+    }
+
+    .skill,
+    .experiance,
+    .certifications,
+    .education,
+    .favorites {
+      padding: 12px 8px;
+    }
+
+    .skill-section,
+    .experiance-section,
+    .certifications-section,
+    .education-section,
+    .favorites-section {
+      padding: 18px 12px;
+    }
+
+    .skill-heading,
+    .experiance-section h1,
+    .education-section h2,
+    .favorites-section h2,
+    .section-header h2 {
+      font-size: 20px;
+    }
+
+    .section-header p {
+      font-size: 12px;
+    }
+
+    .cert-card {
+      padding: 12px;
+    }
+
+    .cert-image {
+      padding: 6px;
+    }
+
+    .cert-info h3 {
+      font-size: 14px;
+    }
+
+    .cert-issuer {
+      font-size: 12px;
+    }
+
+    .contact {
+      padding: 12px 8px;
+    }
+
+    .contact-links {
+      padding: 15px;
+      gap: 18px;
+    }
+
+    #linkedin-links fa-icon,
+    #github-links fa-icon,
+    #website-links fa-icon {
+      font-size: 38px;
+    }
+
+    .scroll-top-btn {
+      bottom: 15px;
+      right: 15px;
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+    }
+  }
   
