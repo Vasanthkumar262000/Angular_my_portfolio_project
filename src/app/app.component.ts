@@ -4,16 +4,17 @@ import { RouterOutlet } from '@angular/router';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faJava, faLinkedin, faPython, faGithub, faJs, faReact, faSquareJs, faBootstrap, faUpwork, faGit, faHtml5} from '@fortawesome/free-brands-svg-icons';
 import { faGlobe,faFilePdf,faHome, faDatabase, faServer, faCode, faUser, faArrowUp, faBriefcase, faFolder, faCertificate, faGraduationCap, faStar,} from '@fortawesome/free-solid-svg-icons';
-import { SplitTextComponent } from './components/split-text.component'; // <-- add this
+import { SplitTextComponent } from './components/split-text.component'; 
 import { HoverGlowDirective } from './components/hover-glow.direction';
 import { RotatingTextComponent } from './components/rotating-text.component';
+import { ChatbotComponent } from './components/chatbot.component';
 
 @Component({  
   selector: 'app-root',
-  standalone: true, // Declare it as a standalone component
-  imports: [CommonModule, FontAwesomeModule, RouterOutlet, SplitTextComponent, HoverGlowDirective, RotatingTextComponent], // Import necessary modules
+  standalone: true,
+  imports: [CommonModule, FontAwesomeModule, RouterOutlet, SplitTextComponent, HoverGlowDirective, RotatingTextComponent, ChatbotComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'] // Corrected 'styleUrl' to 'styleUrls'
+  styleUrls: ['./app.component.css'] 
 })
 export class AppComponent {
   title = 'my_portfolio_project';
@@ -24,9 +25,9 @@ export class AppComponent {
   showexperiance = true;
   showeducation = true;
   showfavorites = true;
-  showScrollTop = false; // Controls visibility of scroll-to-top button
-  activeSection = 'App-contact'; // Tracks the currently active section in navigation
-  isMobile = false; // Track if we're on mobile view
+  showScrollTop = false; 
+  activeSection = 'App-contact'; 
+  isMobile = false; 
 
   certifications = [
     {
@@ -84,7 +85,7 @@ export class AppComponent {
     library.addIcons(faJs);
     library.addIcons(faReact);
     library.addIcons(faSquareJs);
-    // Check initial screen size for mobile detection
+
     this.checkMobile();
     library.addIcons(faBootstrap);
     library.addIcons(faDatabase);
@@ -93,29 +94,26 @@ export class AppComponent {
     library.addIcons(faCode);
     library.addIcons(faHtml5);
     library.addIcons(faUser);
-    library.addIcons(faArrowUp); // Add arrow up icon for scroll-to-top button
-    library.addIcons(faBriefcase); // Briefcase icon for Work Experience
-    library.addIcons(faFolder); // Folder icon for Projects
-    library.addIcons(faCertificate); // Certificate icon for Certifications
-    library.addIcons(faGraduationCap); // Graduation cap icon for Education
-    library.addIcons(faStar); // Star icon for Favorites
-    // Check initial screen size for mobile detection
+    library.addIcons(faArrowUp); 
+    library.addIcons(faBriefcase); 
+    library.addIcons(faFolder); 
+    library.addIcons(faCertificate); 
+    library.addIcons(faGraduationCap); 
+    library.addIcons(faStar); 
+
     this.checkMobile();
   }
 
-  // Check if screen is mobile size
   checkMobile(): void {
     if (typeof window !== 'undefined') {
       this.isMobile = window.innerWidth <= 768;
     }
   }
 
-  // Get text alignment based on screen size
   getProfileNameAlign(): 'left' | 'center' {
     return this.isMobile ? 'center' : 'left';
   }
 
-  // Listen to window resize to update mobile detection
   @HostListener('window:resize', ['$event'])
   onResize(): void {
     this.checkMobile();
@@ -145,29 +143,26 @@ export class AppComponent {
     console.log('All letters have animated!');
   }
 
-  // Listens to window scroll events to show/hide scroll-to-top button and detect active section
+
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
-    // Show button when user scrolls down more than 300px
+
     this.showScrollTop = window.scrollY > 300;
-    
-    // Detect which section is currently in view
+
     this.detectActiveSection();
   }
 
-  // Smoothly scrolls the page to the top when button is clicked
   scrollToTop(): void {
     window.scrollTo({
-      top: 0,           // Scroll to top of page
-      behavior: 'smooth' // Use smooth scrolling animation
+      top: 0,           
+      behavior: 'smooth' 
     });
   }
 
-  // Scrolls to a specific section smoothly
   scrollToSection(sectionId: string): void {
     const element = document.getElementById(sectionId);
     if (element) {
-      const offsetTop = element.offsetTop - 80; // Offset for better visibility
+      const offsetTop = element.offsetTop - 80; 
       window.scrollTo({
         top: offsetTop,
         behavior: 'smooth'
@@ -175,10 +170,9 @@ export class AppComponent {
     }
   }
 
-  // Detects which section is currently in the viewport
   detectActiveSection(): void {
     const sections = ['App-contact', 'skill', 'experiance', 'projects', 'certifications', 'education', 'favorites'];
-    const scrollPosition = window.scrollY + 150; // Offset to trigger active state earlier
+    const scrollPosition = window.scrollY + 150;
 
     for (let i = sections.length - 1; i >= 0; i--) {
       const section = document.getElementById(sections[i]);
@@ -192,8 +186,7 @@ export class AppComponent {
         }
       }
     }
-    
-    // If at the top, set App-contact as active
+
     if (window.scrollY < 100) {
       this.activeSection = 'App-contact';
     }

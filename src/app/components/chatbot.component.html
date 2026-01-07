@@ -1,0 +1,86 @@
+
+<button
+  *ngIf="!isOpen"
+  (click)="toggleChat()"
+  class="chatbot-button"
+  aria-label="Open chat">
+  <svg class="chatbot-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+  </svg>
+  <span class="chatbot-badge">AI</span>
+</button>
+
+<div *ngIf="isOpen" class="chatbot-window">
+  <div class="chatbot-header">
+    <div class="chatbot-header-left">
+      <div class="chatbot-status-dot"></div>
+      <h3 class="chatbot-title">Chat with Vasanth's AI</h3>
+    </div>
+    <div class="chatbot-header-right">
+      <button (click)="clearChat()" class="chatbot-icon-button" title="Clear chat">
+        <svg class="chatbot-small-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+        </svg>
+      </button>
+      <button (click)="toggleChat()" class="chatbot-icon-button" aria-label="Close chat">
+        <svg class="chatbot-small-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="chatbot-messages">
+    <div
+      *ngFor="let message of messages; let i = index"
+      [class]="'chatbot-message-wrapper ' + (message.sender === 'user' ? 'chatbot-message-user' : 'chatbot-message-bot')">
+      <div [class]="'chatbot-message ' +
+        (message.sender === 'user' ? 'chatbot-message-user-bubble' :
+         message.isError ? 'chatbot-message-error' : 'chatbot-message-bot-bubble')">
+        <p class="chatbot-message-text">{{ message.text }}</p>
+        <p *ngIf="message.provider" class="chatbot-message-meta">
+          Powered by {{ message.provider }} ({{ message.model }})
+        </p>
+        <p class="chatbot-message-time">{{ formatTime(message.timestamp) }}</p>
+      </div>
+    </div>
+
+    <div *ngIf="isLoading" class="chatbot-message-wrapper chatbot-message-bot">
+      <div class="chatbot-message chatbot-message-bot-bubble">
+        <div class="chatbot-loading">
+          <div class="chatbot-loading-dot"></div>
+          <div class="chatbot-loading-dot chatbot-loading-dot-delay-1"></div>
+          <div class="chatbot-loading-dot chatbot-loading-dot-delay-2"></div>
+        </div>
+      </div>
+    </div>
+
+    <div #messagesEnd></div>
+  </div>
+
+  <div class="chatbot-input-area">
+    <div class="chatbot-input-wrapper">
+      <input
+        #inputRef
+        type="text"
+        [(ngModel)]="inputMessage"
+        (keydown)="handleKeyPress($event)"
+        placeholder="Ask me anything..."
+        [disabled]="isLoading"
+        class="chatbot-input" />
+      <button
+        (click)="handleSendMessage()"
+        [disabled]="!inputMessage.trim() || isLoading"
+        class="chatbot-send-button">
+        <svg *ngIf="!isLoading" class="chatbot-send-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+        </svg>
+        <svg *ngIf="isLoading" class="chatbot-spinner" viewBox="0 0 24 24">
+          <circle class="chatbot-spinner-circle" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+          <path class="chatbot-spinner-path" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+        </svg>
+      </button>
+    </div>
+    <p class="chatbot-input-hint">Press Enter to send, Shift+Enter for new line</p>
+  </div>
+</div>
