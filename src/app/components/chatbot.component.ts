@@ -23,10 +23,10 @@ export class ChatbotComponent implements OnInit, AfterViewChecked {
   @ViewChild('messagesEnd', { static: false }) messagesEndRef!: ElementRef;
   @ViewChild('inputRef', { static: false }) inputRef!: ElementRef<HTMLInputElement>;
 
-  isOpen = false;
+  isOpen = true;
   messages: Message[] = [
     {
-      text: "Hi! I'm Vasanth's AI assistant. Ask me anything about his experience, skills, projects, or education!",
+      text: "Hi, I'm Vasanth's AI assistant. Ask me anything about his experience, skills, projects, or education",
       sender: 'bot',
       timestamp: new Date(),
     },
@@ -125,7 +125,7 @@ export class ChatbotComponent implements OnInit, AfterViewChecked {
   clearChat(): void {
     this.messages = [
       {
-        text: "Hi! I'm Vasanth's AI assistant. Ask me anything about his experience, skills, projects, or education!",
+        text: "Hi, I'm Vasanth's AI assistant. Ask me anything about his experience, skills, projects, or education",
         sender: 'bot',
         timestamp: new Date(),
       },
