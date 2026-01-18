@@ -1,4 +1,7 @@
 export const environment = {
   production: false,
-  apiUrl: 'https://online-describes-airfare-peoples.trycloudflare.com' // Add this line
+  // For local backend on same machine: 'http://localhost:8000'
+  // For backend on another computer: 'http://<OTHER_COMPUTER_IP>:8000'
+  // Example: 'http://192.168.1.100:8000'
+  apiUrl: 'http://10.0.0.161:8000'
 };

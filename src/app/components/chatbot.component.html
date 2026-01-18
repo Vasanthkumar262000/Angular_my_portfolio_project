@@ -39,7 +39,7 @@
          message.isError ? 'chatbot-message-error' : 'chatbot-message-bot-bubble')">
         <p class="chatbot-message-text">{{ message.text }}</p>
         <p *ngIf="message.provider" class="chatbot-message-meta">
-          Powered by {{ message.provider }} ({{ message.model }})
+          Powered by ({{ message.model }})
         </p>
         <p class="chatbot-message-time">{{ formatTime(message.timestamp) }}</p>
       </div>
