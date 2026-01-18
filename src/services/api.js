@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // IMPORTANT: Replace with your Cloudflare tunnel URL
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'xxxxxxxxxxx;
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'xxxxxx';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
