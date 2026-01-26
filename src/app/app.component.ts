@@ -33,7 +33,7 @@ export class AppComponent {
   projects = [
     {
       id: 'project-1',
-      title: 'Project Demo',
+      title: 'AWS Bedrock Blog Generator',
       description: 'Watch the full project demonstration on YouTube',
       youtubeUrl: 'https://www.youtube.com/watch?v=P3RNge_golM'
     }
