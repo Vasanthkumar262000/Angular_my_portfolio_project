@@ -41,6 +41,7 @@ main{
     transition: all 0.3s ease; /* Smooth transition for all property changes */
     background-color: transparent; /* Transparent by default */
     color: #f1f6ff;           /* Gray color for inactive icons */
+    position: relative;       /* Position relative for label positioning */
   }
 
   .nav-item fa-icon {
@@ -74,6 +75,43 @@ main{
   /* Active hover state */
   .nav-item.active:hover fa-icon {
     color: #ffffff;            /* White icon when active */
+  }
+
+  /* Navigation Label Styles */
+  .nav-label {
+    position: absolute;
+    right: calc(100% + 15px); /* Position to the left of the nav item with spacing */
+    white-space: nowrap;      /* Prevent text wrapping */
+    padding: 8px 12px;        /* Padding for the label */
+    background-color: rgba(78, 86, 120, 0.9); /* Background matching side-nav */
+    color: #f1f6ff;           /* Text color matching inactive icons */
+    border-radius: 8px;       /* Rounded corners */
+    font-size: 14px;          /* Font size */
+    font-family: Arial, Helvetica, sans-serif; /* Match existing font */
+    opacity: 0;               /* Hidden by default */
+    pointer-events: none;     /* Don't interfere with hover */
+    transform: translateX(-10px); /* Start slightly to the right */
+    transition: all 0.3s ease; /* Smooth transition */
+    z-index: 1000;            /* Above other elements */
+    box-shadow: 0 2px 8px rgba(29, 32, 53, 0.4); /* Shadow matching side-nav */
+    backdrop-filter: blur(10px); /* Blur effect matching side-nav */
+  }
+
+  /* Show label on hover */
+  .nav-item:hover .nav-label {
+    opacity: 1;                /* Fully visible on hover */
+    transform: translateX(0); /* Slide into position */
+  }
+
+  /* Active state label styling */
+  .nav-item.active .nav-label {
+    background-color: rgba(134, 159, 200, 0.9); /* Background matching active state */
+    color: #0a0303;           /* Text color matching active state */
+  }
+
+  /* Active hover state label */
+  .nav-item.active:hover .nav-label {
+    background-color: rgba(134, 159, 200, 0.95); /* Slightly more opaque on hover */
   }
 
   .App-contact{

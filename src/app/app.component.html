@@ -5,25 +5,32 @@
       <nav class="side-nav">
         <ul class="nav-list">
           <li class="nav-item" [class.active]="activeSection === 'App-contact'" (click)="scrollToSection('App-contact')" title="Profile">
+            <span class="nav-label">Profile</span>
             <fa-icon [icon]="['fas', 'user']"></fa-icon>
             
           </li>
           <li class="nav-item" [class.active]="activeSection === 'skill'" (click)="scrollToSection('skill')" title="Skills">
+            <span class="nav-label">Skills</span>
             <fa-icon [icon]="['fas', 'code']"></fa-icon>
           </li>
           <li class="nav-item" [class.active]="activeSection === 'experiance'" (click)="scrollToSection('experiance')" title="Work Experience">
+            <span class="nav-label">Work Experience</span>
             <fa-icon [icon]="['fas', 'briefcase']"></fa-icon>
           </li>
           <li class="nav-item" [class.active]="activeSection === 'projects'" (click)="scrollToSection('projects')" title="Projects">
+            <span class="nav-label">Projects</span>
             <fa-icon [icon]="['fas', 'folder']"></fa-icon>
           </li>
           <li class="nav-item" [class.active]="activeSection === 'certifications'" (click)="scrollToSection('certifications')" title="Certifications">
+            <span class="nav-label">Certifications</span>
             <fa-icon [icon]="['fas', 'certificate']"></fa-icon>
           </li>
           <li class="nav-item" [class.active]="activeSection === 'education'" (click)="scrollToSection('education')" title="Education">
+            <span class="nav-label">Education</span>
             <fa-icon [icon]="['fas', 'graduation-cap']"></fa-icon>
           </li>
           <li class="nav-item" [class.active]="activeSection === 'favorites'" (click)="scrollToSection('favorites')" title="My Favorites">
+            <span class="nav-label">My Favorites</span>
             <fa-icon [icon]="['fas', 'star']"></fa-icon>
           </li>
         </ul>
