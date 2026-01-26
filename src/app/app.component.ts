@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faJava, faLinkedin, faPython, faGithub, faJs, faReact, faSquareJs, faBootstrap, faUpwork, faGit, faHtml5} from '@fortawesome/free-brands-svg-icons';
 import { faGlobe,faFilePdf,faHome, faDatabase, faServer, faCode, faUser, faArrowUp, faBriefcase, faFolder, faCertificate, faGraduationCap, faStar,} from '@fortawesome/free-solid-svg-icons';
@@ -28,6 +29,15 @@ export class AppComponent {
   showScrollTop = false; 
   activeSection = 'App-contact'; 
   isMobile = false; 
+
+  projects = [
+    {
+      id: 'project-1',
+      title: 'Project Demo',
+      description: 'Watch the full project demonstration on YouTube',
+      youtubeUrl: 'https://www.youtube.com/watch?v=P3RNge_golM'
+    }
+  ];
 
   certifications = [
     {
@@ -74,7 +84,7 @@ export class AppComponent {
     }
   ];
 
-  constructor(library: FaIconLibrary) {
+  constructor(library: FaIconLibrary, private sanitizer: DomSanitizer) {
     library.addIcons(faLinkedin);
     library.addIcons(faGithub);
     library.addIcons(faGlobe);
@@ -114,7 +124,7 @@ export class AppComponent {
     return this.isMobile ? 'center' : 'left';
   }
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize')
   onResize(): void {
     this.checkMobile();
   }
@@ -195,5 +205,50 @@ export class AppComponent {
   openCertification(link?: string): void {
     if (!link) { return; }
     window.open(link, '_blank', 'noopener');
+  }
+
+  getEmbedUrl(youtubeUrl: string): SafeResourceUrl {
+    const videoId = this.extractVideoId(youtubeUrl);
+    if (!videoId) {
+      console.error('Could not extract video ID from URL:', youtubeUrl);
+      return this.sanitizer.bypassSecurityTrustResourceUrl('');
+    }
+    // Add additional parameters for better compatibility
+    const embedUrl = `https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&enablejsapi=1`;
+    console.log('Video ID extracted:', videoId);
+    console.log('Embed URL generated:', embedUrl);
+    return this.sanitizer.bypassSecurityTrustResourceUrl(embedUrl);
+  }
+
+  extractVideoId(url: string): string {
+    if (!url) return '';
+    
+    // Handle various YouTube URL formats
+    const patterns = [
+      /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/v\/)([^#&?]*)/,
+      /^([a-zA-Z0-9_-]{11})$/ // Direct video ID
+    ];
+    
+    for (const pattern of patterns) {
+      const match = url.match(pattern);
+      if (match && match[1]) {
+        const videoId = match[1];
+        // YouTube video IDs are always 11 characters
+        if (videoId.length === 11) {
+          return videoId;
+        }
+      }
+    }
+    
+    return '';
+  }
+
+  openProject(youtubeUrl?: string): void {
+    if (!youtubeUrl) { return; }
+    window.open(youtubeUrl, '_blank', 'noopener');
+  }
+
+  handleVideoError(event: any, project: any): void {
+    console.error('Video loading error for project:', project.title, event);
   }
 }

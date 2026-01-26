@@ -656,6 +656,41 @@
         </div>
       </section>
 
+      <section id="projects" class="projects">
+        <div class="projects-section">
+          <div class="section-header">
+            <h2>Projects</h2>
+            <p>Showcasing my work through video demonstrations and project highlights.</p>
+          </div>
+          <div class="projects-grid">
+            <div
+              class="project-card"
+              *ngFor="let project of projects"
+              role="button"
+              tabindex="0"
+              appHoverGlow="#22d3ee"
+              (click)="openProject(project.youtubeUrl)"
+              (keyup.enter)="openProject(project.youtubeUrl)"
+            >
+              <div class="project-video">
+                <iframe
+                  [src]="getEmbedUrl(project.youtubeUrl)"
+                  [title]="project.title"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                  loading="lazy">
+                </iframe>
+              </div>
+              <div class="project-info">
+                <h3>{{ project.title }}</h3>
+                <p class="project-description">{{ project.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="certifications" class="certifications">
         <div class="certifications-section">
           <div class="section-header">
