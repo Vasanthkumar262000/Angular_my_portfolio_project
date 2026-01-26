@@ -717,23 +717,23 @@ main{
     height: 7px;
   }
 
-  .skill-next{
+  .skill-langchain{
     justify-content: space-between;
     flex-direction: row;
     text-decoration: none;
     padding: 2%;
   }
-  .skill-next-link{
+  .skill-langchain-link{
     text-decoration: none;
     color: aliceblue;
   }
-  .skill-level-next{
+  .skill-level-langchain{
     justify-content: space-evenly;
     flex-direction: row;
     display: flex;
 
   }
-  .skill-level1-next{
+  .skill-level1-langchain{
     background-color: #d4d4d4;
     margin-top: 10px;
     margin-left: 3px;
@@ -741,7 +741,7 @@ main{
     width: 35px;
     height: 7px;
   }
-  .skill-level2-next{
+  .skill-level2-langchain{
     background-color: #d4d4d4;
     margin-top: 10px;
     margin-left: 3px;
@@ -749,23 +749,23 @@ main{
     width: 35px;
     height: 7px;
   }
-  .skill-level3-next{
-    background-color: #636262;
+  .skill-level3-langchain{
+    background-color: #d4d4d4;
     margin-top: 10px;
     margin-left: 3px;
     margin-right: 3px;
     width: 35px;
     height: 7px;
   }
-  .skill-level4-next{
-    background-color: #636262;
+  .skill-level4-langchain{
+    background-color: #d4d4d4;
     margin-top: 10px;
     margin-left: 3px;
     margin-right: 3px;
     width: 35px;
     height: 7px;
   }
-  .skill-level5-next{
+  .skill-level5-langchain{
     background-color: #636262;
     margin-top: 10px;
     margin-left: 3px;
@@ -774,23 +774,23 @@ main{
     height: 7px;
   }
 
-  .skill-materialui{
+  .skill-langgraph{
     justify-content: space-between;
     flex-direction: row;
     text-decoration: none;
     padding: 2%;
   }
-  .skill-materialui-link{
+  .skill-langgraph-link{
     text-decoration: none;
-    color: rgb(248, 248, 248);
+    color: aliceblue;
   }
-  .skill-level-materialui{
+  .skill-level-langgraph{
     justify-content: space-evenly;
     flex-direction: row;
     display: flex;
 
   }
-  .skill-level1-materialui{
+  .skill-level1-langgraph{
     background-color: #d4d4d4;
     margin-top: 10px;
     margin-left: 3px;
@@ -798,7 +798,7 @@ main{
     width: 35px;
     height: 7px;
   }
-  .skill-level2-materialui{
+  .skill-level2-langgraph{
     background-color: #d4d4d4;
     margin-top: 10px;
     margin-left: 3px;
@@ -806,7 +806,23 @@ main{
     width: 35px;
     height: 7px;
   }
-  .skill-level3-materialui{
+  .skill-level3-langgraph{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level4-langgraph{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level5-langgraph{
     background-color: #636262;
     margin-top: 10px;
     margin-left: 3px;
@@ -814,7 +830,56 @@ main{
     width: 35px;
     height: 7px;
   }
-  .skill-level4-materialui{
+
+  .skill-llamaindex{
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
+    padding: 2%;
+  }
+  .skill-llamaindex-link{
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .skill-level-llamaindex{
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: flex;
+
+  }
+  .skill-level1-llamaindex{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level2-llamaindex{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level3-llamaindex{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level4-llamaindex{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level5-llamaindex{
     background-color: #636262;
     margin-top: 10px;
     margin-left: 3px;
@@ -822,7 +887,170 @@ main{
     width: 35px;
     height: 7px;
   }
-  .skill-level5-materialui{
+
+  .skill-tensorflow{
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
+    padding: 2%;
+  }
+  .skill-tensorflow-link{
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .skill-level-tensorflow{
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: flex;
+
+  }
+  .skill-level1-tensorflow{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level2-tensorflow{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level3-tensorflow{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level4-tensorflow{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level5-tensorflow{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+
+  .skill-pytorch{
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
+    padding: 2%;
+  }
+  .skill-pytorch-link{
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .skill-level-pytorch{
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: flex;
+
+  }
+  .skill-level1-pytorch{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level2-pytorch{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level3-pytorch{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level4-pytorch{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level5-pytorch{
+    background-color: #636262;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+
+  .skill-huggingface{
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
+    padding: 2%;
+  }
+  .skill-huggingface-link{
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .skill-level-huggingface{
+    justify-content: space-evenly;
+    flex-direction: row;
+    display: flex;
+
+  }
+  .skill-level1-huggingface{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level2-huggingface{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level3-huggingface{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level4-huggingface{
+    background-color: #d4d4d4;
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 35px;
+    height: 7px;
+  }
+  .skill-level5-huggingface{
     background-color: #636262;
     margin-top: 10px;
     margin-left: 3px;
@@ -1830,8 +2058,12 @@ main{
     .skill-javascript,
     .skill-react,
     .skill-typescript,
-    .skill-next,
-    .skill-materialui,
+    .skill-langchain,
+    .skill-langgraph,
+    .skill-llamaindex,
+    .skill-tensorflow,
+    .skill-pytorch,
+    .skill-huggingface,
     .skill-bootstrap,
     .skill-tailwind,
     .skill-django,
@@ -1849,8 +2081,12 @@ main{
     .skill-name-javascript,
     .skill-name-react,
     .skill-name-typescript,
-    .skill-name-next,
-    .skill-name-materialui,
+    .skill-name-langchain,
+    .skill-name-langgraph,
+    .skill-name-llamaindex,
+    .skill-name-tensorflow,
+    .skill-name-pytorch,
+    .skill-name-huggingface,
     .skill-name-bootstrap,
     .skill-name-tailwind,
     .skill-name-django,
@@ -1864,8 +2100,12 @@ main{
     .skill-javascript-link,
     .skill-react-link,
     .skill-typescript-link,
-    .skill-next-link,
-    .skill-materialui-link,
+    .skill-langchain-link,
+    .skill-langgraph-link,
+    .skill-llamaindex-link,
+    .skill-tensorflow-link,
+    .skill-pytorch-link,
+    .skill-huggingface-link,
     .skill-bootstrap-link,
     .skill-tailwind-link,
     .skill-django-link,
@@ -1879,8 +2119,12 @@ main{
     .skill-level-javascript,
     .skill-level-react,
     .skill-level-typescript,
-    .skill-level-next,
-    .skill-level-materialui,
+    .skill-level-langchain,
+    .skill-level-langgraph,
+    .skill-level-llamaindex,
+    .skill-level-tensorflow,
+    .skill-level-pytorch,
+    .skill-level-huggingface,
     .skill-level-bootstrap,
     .skill-level-tailwind,
     .skill-level-django,

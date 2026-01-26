@@ -15,7 +15,7 @@ export interface ChatResponse {
 })
 export class ChatApiService {
 
-  private apiBaseUrl = (environment as any).apiUrl || 'xxxxxxx;
+  private apiBaseUrl = (environment as any).apiUrl || 'https://chatbot.vasanthkumarr.com';
 
   constructor(private http: HttpClient) {} 
 
