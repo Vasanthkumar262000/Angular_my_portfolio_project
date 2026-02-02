@@ -15,7 +15,7 @@ export interface ChatResponse {
 })
 export class ChatApiService {
 
-  private apiBaseUrl = (environment as any).apiUrl || 'http://0.0.0.0:8000';
+  private apiBaseUrl = (environment as any).apiUrl || 'sfkray4p';
 
   constructor(private http: HttpClient) {} 
 
