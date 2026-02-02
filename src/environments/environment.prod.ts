@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://chatbot.vasanthkumarr.com'
+  apiUrl: 'http://0.0.0.0:8000'
 };
